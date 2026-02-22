@@ -7,8 +7,8 @@
   <title>Hello, World!</title>
 </head>
 <body><br>
-  <input id="account"><br><br>
-  <input id="money"><br><br>
+  <input id="account" placeholder="계좌번호 입력(- 제외, 없는 계좌는 전송 불가)"><br><br>
+  <input id="money" placeholder="돈 입력"><br><br>
   <button id="in" onclick = "start()">입금</button>
   <script>
   let account = document.getElementById("account").value;
@@ -17,12 +17,12 @@
     money = document.getElementById("money").value
     account = document.getElementById("account").value;
     if(isNaN(money) || money.trim() === ""){alert("돈이 정수가 아닙니다.");return 0;}
-    if(10 <= account.length && account.length <= 14){
+    //if(10 <= account.length && account.length <= 14){
       alert("송금 중 입니다.")
       alert(`성공적으로 ${money}원이 지급되었습니다.`)
       return 0;
-    }
-    alert("계좌가 유효하지 않다.")
+    //}
+    //alert("계좌가 유효하지 않다.")
   }
   </script>
 </body>
